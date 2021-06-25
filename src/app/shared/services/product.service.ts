@@ -5,7 +5,7 @@ import { environment } from "../../../environments/environment";
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
-  private readonly apiUrl = `https://cors-anywhere.herokuapp.com/${environment.apiURL}`;
+  private readonly apiUrl = environment.apiURL;
 
   constructor(@Inject(HttpClient) private readonly http: HttpClient) {}
 
